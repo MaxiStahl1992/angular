@@ -6,5 +6,4 @@ My goal is to understand how the Framework works, and how to utilize all its fea
 
 The Projects are ranked from beginner to advanced. 
 
-Beginner: 
-    - Notes App
+![Projects](/project_ideas.png)
