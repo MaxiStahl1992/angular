@@ -1,4 +1,4 @@
-# Begginer Project #1
+# Beginner Project #1
 
 My first Angular Project: Note App 
 
