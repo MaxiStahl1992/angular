@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+html { 
+    background-color: rgb(36, 49, 49);
+    height: 100vh;
+}
+
+body{
+    padding: 10px;
+    margin: 0px;
+    height: calc(100vh - 20px);
+}
+
+header{
+    background-color: rgb(43, 58, 58);
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #fefefe;
+}
+
+//margins
+.margin-right-s{
+    margin-right: 8px;
+}
+
+.margin-right-3s{
+    margin-right: 10px;
+}
+
+.margin-right-3s{
+    margin-right: 12px;
+}
+
+.margin-right-m{
+    margin-right: 14px;
+}
+
+.margin-right-2m{
+    margin-right: 16px;
+}
+
+.margin-right-3m{
+    margin-right: 18px;
+}
+
+.margin-right-l{
+    margin-right: 20px;
+}
+
+.margin-right-2l{
+    margin-right: 22px;
+}

@@ -1,0 +1,37 @@
+header {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.header__notes-list, .header__notes {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+}
+
+.header__notes-list {
+    width: 300px;
+    border-right: 1px solid black;
+    border-radius: 5px;
+}
+
+.header__notes {
+    width: calc(100% - 300px);
+}
+
+fa-icon{
+    color: rgb(63, 104, 104);
+    font-size: 24px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+fa-icon:hover{
+    background-color: blue;
+    border-radius: 10px;
+    background-color: rgb(48, 80, 80);
+}
