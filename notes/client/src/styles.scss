@@ -19,6 +19,18 @@ h1, h2, h3, h4, h5, h6, p, span {
     color: #fefefe;
 }
 
+//flex
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 //margins
 .margin-right-s{
     margin-right: 8px;

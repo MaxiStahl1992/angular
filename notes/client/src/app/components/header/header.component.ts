@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { faList, faTrashCan, faFolder, faPenToSquare, faFont, faListCheck, faTable, faImages, faArrowUpFromBracket, faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -6,7 +6,7 @@ import { faList, faTrashCan, faFolder, faPenToSquare, faFont, faListCheck, faTab
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent{
   //Fontaweome icons
   faList = faList;
   faTrashCan = faTrashCan;
@@ -19,5 +19,14 @@ export class HeaderComponent {
   faArrowUpFromBracket = faArrowUpFromBracket;
   faMagnifyingGlass = faMagnifyingGlass;
 
+  searchEnabled = false;
+  fontOptionsEnabled = false;
 
+  toggleSearch() {
+    this.searchEnabled = !this.searchEnabled;
+  }
+
+  toggleFontOptions() {
+    this.fontOptionsEnabled = !this.fontOptionsEnabled;
+  }
 }

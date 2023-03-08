@@ -31,7 +31,20 @@ fa-icon{
 }
 
 fa-icon:hover{
-    background-color: blue;
     border-radius: 10px;
     background-color: rgb(48, 80, 80);
+}
+
+input{
+    background-color: rgb(48, 80, 80);
+    border: none;
+    border-radius: 20px;
+    height: 24px;
+    padding: 0 8px;
+}
+
+app-font-style-modal {
+    position: absolute;
+    top: 75px;
+    margin-right: 10px;
 }

@@ -8,15 +8,19 @@
     </div>
     <div class="header__notes">
         <fa-icon [icon]="faPenToSquare"></fa-icon>
-        <div>
-            <fa-icon [icon]="faFont" class="margin-right-s"></fa-icon>
+        <div class="center">
+            <div class="flex-column center">
+                <fa-icon [icon]="faFont" class="margin-right-s" (click)="toggleFontOptions()"></fa-icon>
+                <app-font-style-modal [fontOptionsEnabled]="fontOptionsEnabled" *ngIf="fontOptionsEnabled"></app-font-style-modal>
+            </div>
             <fa-icon [icon]="faListCheck" class="margin-right-s"></fa-icon>
             <fa-icon [icon]="faTable" class="margin-right-s"></fa-icon>
             <fa-icon [icon]="faImages"></fa-icon>
         </div>
-        <div>
+        <div class="center">
             <fa-icon [icon]="faArrowUpFromBracket" class="margin-right-s"></fa-icon>
-            <fa-icon [icon]="faMagnifyingGlass" class="margin-right-s"></fa-icon>
+            <fa-icon [icon]="faMagnifyingGlass" class="margin-right-s" (click)="toggleSearch()"></fa-icon>
+            <input placeholder="search" *ngIf="searchEnabled">
         </div>
     </div>
 </header>
