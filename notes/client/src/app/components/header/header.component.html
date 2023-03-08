@@ -11,7 +11,7 @@
         <div class="center">
             <div class="flex-column center">
                 <fa-icon [icon]="faFont" class="margin-right-s" (click)="toggleFontOptions()"></fa-icon>
-                <app-font-style-modal [fontOptionsEnabled]="fontOptionsEnabled" *ngIf="fontOptionsEnabled"></app-font-style-modal>
+                <app-font-style-modal *ngIf="fontOptionsEnabled"></app-font-style-modal>
             </div>
             <fa-icon [icon]="faListCheck" class="margin-right-s"></fa-icon>
             <fa-icon [icon]="faTable" class="margin-right-s"></fa-icon>
