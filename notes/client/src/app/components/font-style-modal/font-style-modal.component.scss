@@ -1,7 +1,7 @@
 .modal___arrow {
     width: 0px;
     height: 0px;
-    margin-left: 35px;
+    margin-left: 40px;
     border-bottom: 15px solid rgb(48, 80, 80);
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
@@ -13,14 +13,14 @@
     justify-content: space-around;
     align-items: center;
     width: 100px;
-    height: 50px;
     background-color:  rgb(48, 80, 80);
     border-radius: 5px;
+    padding: 5px;
 }
 
 fa-icon{
     color: rgb(63, 104, 104);
-    font-size: 24px;
+    font-size: 20px;
     padding: 4px 8px;
     transition: all .5s;
     cursor: pointer;
