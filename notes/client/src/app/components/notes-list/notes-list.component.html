@@ -1,9 +1,9 @@
 <ul>
-    <li>
-        <h1>Headline</h1>
+    <li *ngFor="let note of notes">
+        <h1>{{note.headline}}</h1>
         <div class="note-list___text">
-            <span>01.01.2022</span>
-            <p>text text text</p>
+            <span>{{note.date}}</span>
+            <p>{{note.text}}</p>
         </div>
     </li>
 </ul>

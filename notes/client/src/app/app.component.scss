@@ -9,15 +9,16 @@ main {
 
 app-notes-list, app-note {
     padding: 0 12px;
-    overflow: hidden;
 }
 
 app-notes-list {
     width: 300px;
     border-right: 1px solid black;
     border-radius: 5px;
+    overflow-y: auto;
 }
 
 app-note {
     width: calc(100% - 300px);
+    overflow: hidden;
 }
