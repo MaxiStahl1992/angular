@@ -1,0 +1,23 @@
+main {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 95px);
+    margin-top: 15px;
+    background-color: rgb(43, 58, 58);
+    border-radius: 5px;
+}
+
+app-notes-list, app-note {
+    padding: 0 12px;
+    overflow: scroll;
+}
+
+app-notes-list {
+    width: 300px;
+    border-right: 1px solid black;
+    border-radius: 5px;
+}
+
+app-note {
+    width: calc(100% - 300px);
+}
