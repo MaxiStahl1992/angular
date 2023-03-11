@@ -23,7 +23,7 @@ li:hover {
 
 span, p {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 h1 {
@@ -34,6 +34,10 @@ h1 {
 
 p {
     margin: 0;
+    max-height: 26px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 span {
