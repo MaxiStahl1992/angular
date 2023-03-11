@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { NotesService } from 'src/app/notes.service';
 import { Note } from 'src/app/note';
 
@@ -9,6 +9,7 @@ import { Note } from 'src/app/note';
 })
 export class NotesListComponent {
   notes: Note[] = [];
+  selectedNote: Note = {id: 0, date: '', headline: 'add new note', text: ''};
 
   constructor(private notesService: NotesService) {};
 
@@ -20,4 +21,9 @@ export class NotesListComponent {
     this.notesService.getNotes()
       .subscribe(notes => this.notes = notes);
   }
+
+  selectNote(note: Note): void {
+    this.selectedNote = note;
+  }
+
 }

@@ -1,9 +1,12 @@
-<ul>
-    <li *ngFor="let note of notes">
-        <h1>{{note.headline}}</h1>
-        <div class="note-list___text">
-            <span>{{note.date}}</span>
-            <p>{{note.text}}</p>
-        </div>
-    </li>
-</ul>
+<div class="notes">
+    <ul>
+        <li *ngFor="let note of notes" (click)="selectNote(note)">
+            <h1>{{note.headline}}</h1>
+            <div class="note-list___text">
+                <span>{{note.date}}</span>
+                <p>{{note.text}}</p>
+            </div>
+        </li>
+    </ul>
+    <app-note [selectedNote]="selectedNote"></app-note>
+</div>
