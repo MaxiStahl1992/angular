@@ -1,5 +1,6 @@
-import { Component, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { faList, faTrashCan, faFolder, faPenToSquare, faFont, faListCheck, faTable, faImages, faArrowUpFromBracket, faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
+import { Note } from 'src/app/note';
 
 @Component({
   selector: 'app-header',
@@ -28,5 +29,9 @@ export class HeaderComponent{
 
   toggleFontOptions() {
     this.fontOptionsEnabled = !this.fontOptionsEnabled;
+  }
+
+  triggerCreateNewNote() {
+    
   }
 }

@@ -7,7 +7,7 @@
         <fa-icon [icon]="faTrashCan"></fa-icon>
     </div>
     <div class="header__notes">
-        <fa-icon [icon]="faPenToSquare"></fa-icon>
+        <fa-icon [icon]="faPenToSquare" (click)="triggerCreateNewNode()"></fa-icon>
         <div class="center">
             <div class="flex-column center">
                 <fa-icon [icon]="faFont" class="margin-right-s" (click)="toggleFontOptions()"></fa-icon>
