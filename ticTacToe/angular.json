@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ticTacToe": {
+    "TicTacToe": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ticTacToe:build:production"
+              "browserTarget": "TicTacToe:build:production"
             },
             "development": {
-              "browserTarget": "ticTacToe:build:development"
+              "browserTarget": "TicTacToe:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ticTacToe:build"
+            "browserTarget": "TicTacToe:build"
           }
         },
         "test": {
