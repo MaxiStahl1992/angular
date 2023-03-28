@@ -1,0 +1,31 @@
+.grid {
+    height: 50vh;
+    width: 50vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px
+}
+
+.grid-cell {
+    background-color: lightcyan;
+    box-shadow: 0 0 5px 2px rgb(162, 185, 185);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.winner-message {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: darkcyan;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
