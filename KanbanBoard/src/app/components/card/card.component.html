@@ -1,6 +1,10 @@
-<div class="card">
-    <div>EPIC</div>
-    <h4 class="card-title">test</h4>
-    <div>Ticket No</div>
-    <div>Label</div>
+<div class="card" *ngFor="let ticket of tickets">
+    <app-tag></app-tag>
+    <h4 class="card-title">{{ticket.title}}</h4>
+    <div class="card-information">
+        <img src="">
+        <p>Ticket No</p>
+        <app-avatar></app-avatar>
+    </div>
+    <app-label></app-label>
 </div>

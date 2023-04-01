@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AvatarComponent } from './components/avatar/avatar.component';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,5 @@ import { AvatarComponent } from './components/avatar/avatar.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  
 }

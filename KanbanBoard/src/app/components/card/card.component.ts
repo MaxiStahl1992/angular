@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TICKETS } from 'src/db-data';
 
 @Component({
   selector: 'app-card',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
-
+  tickets: any = TICKETS;
 }
