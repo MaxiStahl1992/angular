@@ -24,7 +24,8 @@
         
         <div class="sidebar_content_team">
             <h4>THE TEAM</h4>
-        </div>
-        
+            <li *ngFor="let member of members">
+                <app-team-member [name]="member.name"></app-team-member>
+            </li>
     </div>
 </div>

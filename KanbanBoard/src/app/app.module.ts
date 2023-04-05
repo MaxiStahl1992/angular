@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { NgDragDropModule } from 'ng-drag-drop';
 import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/card.component';
-import { StakeholderComponent } from './components/stakeholder/stakeholder.component';
 import { ExternalLinkComponent } from './components/external-link/external-link.component';
 import { LabelComponent } from './components/label/label.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
@@ -15,18 +14,19 @@ import { KanbanBoardComponent } from './modules/kanban-board/kanban-board.compon
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { TeamMemberComponent } from './components/team-member/team-member.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    StakeholderComponent,
     ExternalLinkComponent,
     LabelComponent,
     AvatarComponent,
     TagComponent,
     SidebarComponent,
-    KanbanBoardComponent
+    KanbanBoardComponent,
+    TeamMemberComponent
   ],
   imports: [
     BrowserModule,
