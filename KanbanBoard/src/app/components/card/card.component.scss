@@ -1,9 +1,9 @@
 .card {
-    min-height: 150px;
-    width: 300px;
-    background-color: white;
-    border-radius: 15px;
-    padding: 10px 12px;
-    display: flex;
-    flex-direction: column;
+    width: calc(100% - 8px);
+    min-height: 120px;
+    background-color: #E3FCEF;
+    border-radius: 5px;
+    margin: 8px 0;
+    padding: 4px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }

@@ -30,15 +30,15 @@
 
 .kanban-board_lane {
     flex: 1;
-    margin: 10px 5px;
+    margin: 10px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow-y: scroll;
     overflow-x: hidden;
-    background-color: blue;
 }
 
 .kanban-board_lane-items {
     list-style: none;
+    width: 100%;
 }
