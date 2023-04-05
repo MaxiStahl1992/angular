@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-external-link',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./external-link.component.scss']
 })
 export class ExternalLinkComponent {
-
+  @Input() linkName: string = ''; 
+  @Input() link: string = ''
 }

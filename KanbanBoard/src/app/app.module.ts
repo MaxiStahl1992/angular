@@ -12,6 +12,9 @@ import { AvatarComponent } from './components/avatar/avatar.component';
 import { TagComponent } from './components/tag/tag.component';
 import { SidebarComponent } from './modules/sidebar/sidebar.component';
 import { KanbanBoardComponent } from './modules/kanban-board/kanban-board.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,11 @@ import { KanbanBoardComponent } from './modules/kanban-board/kanban-board.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgDragDropModule.forRoot()
+    NgDragDropModule.forRoot(),
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

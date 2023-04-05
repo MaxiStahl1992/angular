@@ -6,6 +6,25 @@
 
     <div class="sidebar_content">
         <h1>THE KANBAN PROJECT</h1>
+
+        <div class="sidebar_content_date">
+            <h4>DUE DATE</h4>
+            <div class="flex direction-row">
+                <img src="../../../assets/date_overdue.png" alt="dates"> 
+                <p>00/00/00</p>
+            </div>
+        </div>
+
+        <div class="sidebar_content_links">
+            <h4>PROTOTYPE</h4>
+            <app-external-link [linkName]="desktop" [link]="link"></app-external-link>
+            <app-external-link [linkName]="mobile" [link]="link"></app-external-link>
+            <app-external-link [linkName]="tablet" [link]="link"></app-external-link>
+        </div>
+        
+        <div class="sidebar_content_team">
+            <h4>THE TEAM</h4>
+        </div>
         
     </div>
 </div>

@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-
+  desktop = 'desktop';
+  mobile = 'mobile';
+  tablet = 'tablet';
+  link = 'http://www.google.com'
 }

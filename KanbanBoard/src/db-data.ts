@@ -1,5 +1,4 @@
 export const TICKETS: any = [
-
     {
         id: 1,
         title: "Create Kanban Board",
