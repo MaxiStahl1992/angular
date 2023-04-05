@@ -8,9 +8,13 @@
     <div class="kanban-board_lanes" >
         <div class="kanban-board_lane" *ngFor="let lane of swimLanes">
             <li class="kanban-board_lane-items" *ngFor="let ticket of backlogTickets">
-                <app-card></app-card>
+                <app-card
+                    [title]="ticket.title"
+                    [tag]="ticket.tag"
+                    [id]="ticket.id"
+                    [labels]="ticket.label"
+                ></app-card>
             </li>
         </div>
     </div>
-    
 </div>

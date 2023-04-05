@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { TICKETS } from 'src/db-data';
 
 @Component({
@@ -6,6 +6,13 @@ import { TICKETS } from 'src/db-data';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
-export class CardComponent {
-  tickets: any = TICKETS;
+export class CardComponent implements OnInit{
+  @Input() title: string = '';
+  @Input() tag: string = '';
+  @Input() id?: number;
+  @Input() labels: string[]= [];
+
+  ngOnInit(): void {
+    console.log(this.labels)
+  }
 }
