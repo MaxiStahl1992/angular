@@ -2,8 +2,7 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Ticket } from 'src/app/model/ticket';
 import { TicketService } from '../../services/ticket.service';
 import { Observable } from 'rxjs';
-import { MemberService } from '../../services/member.service';
-import { Member } from 'src/app/model/member';
+
 
 @Component({
   selector: 'app-kanban-board',
@@ -11,22 +10,34 @@ import { Member } from 'src/app/model/member';
   styleUrls: ['./kanban-board.component.scss']
 })
 export class KanbanBoardComponent implements OnInit {
+  swimLanes: string[] = ['backlog', 'ready', 'in progress', 'test', 'done']
   tickets: Ticket[] = [];
-  members: Member[] = [];
-
-  constructor(private ticketService: TicketService, private memberService: MemberService) {}
+  backlogTickets: Ticket[] = [];
+  
+  constructor(private ticketService: TicketService) {}
   
   ngOnInit() {
     this.getTickets();
-    this.getMembers();
+    this.sortTickets();
   }
 
   getTickets(): void {
     this.ticketService.getTickets().subscribe(tickets => this.tickets = tickets);
   }
 
-  getMembers(): void {
-    this.memberService.getMembers().subscribe(members => this.members = members)
+  sortTickets(): void {
+    this.ticketService.getTickets().subscribe(tickets => {
+      for(let ticket of tickets) {
+        switch (ticket.status) {
+          case 'backlog': 
+            this.backlogTickets.push(ticket)
+            break;
+          default:
+            break;
+        }
+      }
+    })
   }
+
 
 }

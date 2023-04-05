@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, ReplaySubject, map } from 'rxjs';
 import { Ticket } from '../model/ticket';
 
 @Injectable({
@@ -12,7 +12,9 @@ export class TicketService {
   constructor(private http: HttpClient) { }
 
   getTickets(): Observable<Ticket[]> {
-    return this.http.get<Ticket[]>(this.ticketUrl);
+    return this.http.get<Ticket[]>(this.ticketUrl)
   }
+
+
   
 }
