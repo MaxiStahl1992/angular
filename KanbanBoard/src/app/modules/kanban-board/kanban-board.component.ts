@@ -10,9 +10,14 @@ import { Observable } from 'rxjs';
   styleUrls: ['./kanban-board.component.scss']
 })
 export class KanbanBoardComponent implements OnInit {
-  swimLanes: string[] = ['backlog', 'ready', 'in progress', 'test', 'done']
+  swimLanes: string[] = ['backlog', 'ready', 'progress', 'test', 'done']
   tickets: Ticket[] = [];
-  backlogTickets: Ticket[] = [];
+  backlog: Ticket[] = [];
+  ready: Ticket[] = [];
+  progress: Ticket[] = [];
+  test: Ticket[] = [];
+  done: Ticket[] = [];
+
   
   constructor(private ticketService: TicketService) {}
   
@@ -30,7 +35,19 @@ export class KanbanBoardComponent implements OnInit {
       for(let ticket of tickets) {
         switch (ticket.status) {
           case 'backlog': 
-            this.backlogTickets.push(ticket)
+            this.backlog.push(ticket)
+            break;
+          case 'ready': 
+            this.ready.push(ticket)
+            break;
+          case 'progress': 
+            this.progress.push(ticket)
+            break;
+          case 'test': 
+            this.test.push(ticket)
+            break;
+          case 'done': 
+            this.done.push(ticket)
             break;
           default:
             break;

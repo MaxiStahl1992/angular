@@ -36,16 +36,16 @@ export class InMemoryDataService implements InMemoryDbService {
         type: "task",
         assignee: ["Alina"],
         label: ['PO'],
-        status: 'design'
+        status: 'ready'
       },
       {
         id: 4,
         title: "Happieness Management",
         tag: "Epic",
-        type: "Experiment",
+        type: "experiment",
         assignee: ["Kobe"],
         label: ['Dog'],
-        status: 'build'
+        status: 'test'
       },
       {
         id: 5,
@@ -54,7 +54,7 @@ export class InMemoryDataService implements InMemoryDbService {
         type: "task",
         assignee: ["Max"],
         label: ['Dev'],
-        status: 'signOff'
+        status: 'progress'
       },
       {
         id: 6,
@@ -63,7 +63,7 @@ export class InMemoryDataService implements InMemoryDbService {
         type: "task",
         assignee: ["Max"],
         label: ['Dev'],
-        status: 'build'
+        status: 'done'
       },
       {
         id: 7,
@@ -72,7 +72,7 @@ export class InMemoryDataService implements InMemoryDbService {
         type: "subtask",
         assignee: ["Alina"],
         label: ['PO'],
-        status: 'done'
+        status: 'test'
       },
       {
         id: 8,
@@ -87,10 +87,10 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 9,
         title: "Organize Party",
         tag: "Task",
-        type: "date",
+        type: "dates",
         assignee: ["Kobe"],
         label: ['Dog'],
-        status: 'signOff'
+        status: 'progress'
       },
       {
         id: 10,
@@ -99,7 +99,7 @@ export class InMemoryDataService implements InMemoryDbService {
         type: "subtask",
         assignee: ["Alina"],
         label: ['PO'],
-        status: 'design'
+        status: 'ready'
       }
     ];
     const members = [
