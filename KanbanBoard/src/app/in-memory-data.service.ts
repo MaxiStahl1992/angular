@@ -13,7 +13,7 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 1,
         title: "Create Kanban Board",
         tag: "Epic",
-        type: "Experiment",
+        type: "experiment",
         assignee: ["Max", "Alina", "Carolin", "Kobe"],
         label: ['Dev', 'UX', 'PO', 'Dog'],
         status: 'backlog'
@@ -23,7 +23,7 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 2,
         title: "Kanban Design",
         tag: "Task",
-        type: "Design",
+        type: "design",
         assignee: ["Carolin"],
         label: ['UX'],
         status: 'backlog'
@@ -33,7 +33,7 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 3,
         title: "Kanban Presentation",
         tag: "Task",
-        type: "Task",
+        type: "task",
         assignee: ["Alina"],
         label: ['PO'],
         status: 'design'
@@ -51,7 +51,7 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 5,
         title: "Kanban Setup Dev Environment",
         tag: "Task",
-        type: "Task",
+        type: "task",
         assignee: ["Max"],
         label: ['Dev'],
         status: 'signOff'
@@ -60,7 +60,7 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 6,
         title: "Kanban Development",
         tag: "Task",
-        type: "Task",
+        type: "task",
         assignee: ["Max"],
         label: ['Dev'],
         status: 'build'
@@ -69,7 +69,7 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 7,
         title: "Create Kanban Board Taks",
         tag: "Subtask",
-        type: "Subtask",
+        type: "subtask",
         assignee: ["Alina"],
         label: ['PO'],
         status: 'done'
@@ -78,7 +78,7 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 8,
         title: "Test Kanban",
         tag: "Test",
-        type: "Task",
+        type: "task",
         assignee: ["Carolin"],
         label: ['UX'],
         status: 'done'
@@ -87,7 +87,7 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 9,
         title: "Organize Party",
         tag: "Task",
-        type: "Date",
+        type: "date",
         assignee: ["Kobe"],
         label: ['Dog'],
         status: 'signOff'
@@ -96,7 +96,7 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 10,
         title: "Invite Guests to Party",
         tag: "Subtask",
-        type: "Subtask",
+        type: "subtask",
         assignee: ["Alina"],
         label: ['PO'],
         status: 'design'

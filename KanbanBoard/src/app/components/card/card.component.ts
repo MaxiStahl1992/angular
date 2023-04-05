@@ -11,8 +11,10 @@ export class CardComponent implements OnInit{
   @Input() tag: string = '';
   @Input() id?: number;
   @Input() labels: string[]= [];
+  @Input() type: string = '';
+  @Input() assignees: string[] = [];
 
   ngOnInit(): void {
-    console.log(this.labels)
+    console.log(this.assignees)
   }
 }

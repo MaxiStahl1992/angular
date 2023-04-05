@@ -2,8 +2,15 @@
     <app-tag [tag]="tag"></app-tag>
     <p class="card_title">{{title}}</p>
     <div class="card_info">
-        <img>
-        <p>{{id}}</p>
+        <div class="card_info-ticket">
+            <img src="../../../assets/{{type}}.png">
+            <p>TICKET NO {{id}}</p>
+        </div>
+        <div class="card_info-member" >
+            <ng-container *ngFor="let assignee of assignees">
+                <app-avatar [assigneeName]="assignee"></app-avatar>
+            </ng-container>   
+        </div>
     </div>
     <div class="card_labels">
         <ng-container *ngFor="let label of labels">

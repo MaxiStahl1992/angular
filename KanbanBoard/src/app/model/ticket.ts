@@ -3,7 +3,7 @@ export interface Ticket {
     title: string;
     tag: string;
     type: string;
-    asignee: [];
+    assignee: [];
     label: [];
     status: string;
 }

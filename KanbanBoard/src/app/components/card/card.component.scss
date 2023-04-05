@@ -3,9 +3,16 @@
     min-height: 120px;
     background-color: #E3FCEF;
     border-radius: 5px;
-    margin: 8px 0;
+    margin: 10px 0;
     padding: 4px;
+    padding-top: 8px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all .15s;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.01);
 }
 
 .card_title {
@@ -16,10 +23,40 @@
     text-overflow: ellipsis;
 }
 
+.card_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.card_info-ticket {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        margin-right: 5px;
+    }
+
+    p{
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+
+.card_info-member {
+    display: flex;
+    flex-direction: row;
+}
+
 .card_labels {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    margin-top: 5px;
+    margin-top: 10px;
 }
