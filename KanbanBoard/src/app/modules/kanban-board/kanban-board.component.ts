@@ -1,7 +1,7 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Ticket } from 'src/app/model/ticket';
 import { TicketService } from '../../services/ticket.service';
-import { Observable } from 'rxjs';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 
 @Component({
@@ -11,7 +11,6 @@ import { Observable } from 'rxjs';
 })
 export class KanbanBoardComponent implements OnInit {
   swimLanes: string[] = ['backlog', 'ready', 'progress', 'test', 'done']
-  tickets: Ticket[] = [];
   backlog: Ticket[] = [];
   ready: Ticket[] = [];
   progress: Ticket[] = [];
@@ -22,12 +21,7 @@ export class KanbanBoardComponent implements OnInit {
   constructor(private ticketService: TicketService) {}
   
   ngOnInit() {
-    this.getTickets();
     this.sortTickets();
-  }
-
-  getTickets(): void {
-    this.ticketService.getTickets().subscribe(tickets => this.tickets = tickets);
   }
 
   sortTickets(): void {
@@ -56,5 +50,16 @@ export class KanbanBoardComponent implements OnInit {
     })
   }
 
-
+  drop(event: CdkDragDrop<Ticket[]>) {
+    if(event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex,
+      )
+    }
+  }
 }

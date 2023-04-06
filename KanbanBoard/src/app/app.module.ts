@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
-import { NgDragDropModule } from 'ng-drag-drop';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/card.component';
 import { ExternalLinkComponent } from './components/external-link/external-link.component';
@@ -31,7 +30,7 @@ import { TeamMemberComponent } from './components/team-member/team-member.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgDragDropModule.forRoot(),
+    DragDropModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
