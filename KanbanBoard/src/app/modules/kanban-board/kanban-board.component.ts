@@ -10,7 +10,7 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
   styleUrls: ['./kanban-board.component.scss']
 })
 export class KanbanBoardComponent implements OnInit {
-  swimLanes: string[] = ['backlog', 'ready', 'progress', 'test', 'done']
+  swimLanes: string[] = ['backlog', 'ready', 'in progress', 'test', 'done']
   backlog: Ticket[] = [];
   ready: Ticket[] = [];
   progress: Ticket[] = [];
