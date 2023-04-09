@@ -11,6 +11,8 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 export class CardComponent {
   @Input() title: string = '';
   @Input() tag: string = '';
+  @Input() description: string = '';
+  @Input() acceptanceCriteria: string = '';
   @Input() id?: number;
   @Input() labels: string[]= [];
   @Input() type: string = '';
@@ -19,11 +21,19 @@ export class CardComponent {
   constructor(private dialog: MatDialog) {}
 
   openDialog() {
-    const dialogConfig = new MatDialogConfig();
+    const dialogRef = this.dialog.open(DialogCardComponent, {
+      data: {
+        title: this.title, 
+        tag: this.tag, 
+        id: this.id, 
+        labels: this.labels, 
+        type: this.type, 
+        assignees: this.assignees
+      }
+    })
 
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
-
-    this.dialog.open(DialogCardComponent, dialogConfig);
+    dialogRef.afterClosed().subscribe( result => {
+      console.log('dialog closed');
+    })
   }
 }

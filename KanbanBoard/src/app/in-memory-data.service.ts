@@ -12,6 +12,8 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 1,
         title: "Create Kanban Board",
+        description: "...",
+        acceptanceCriteria: "...",
         tag: "Epic",
         type: "experiment",
         assignee: ["Max", "Alina", "Carolin", "Kobe"],
@@ -22,6 +24,8 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 2,
         title: "Kanban Design",
+        description: "...",
+        acceptanceCriteria: "...",
         tag: "Task",
         type: "design",
         assignee: ["Carolin"],
@@ -32,6 +36,8 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 3,
         title: "Kanban Presentation",
+        description: "...",
+        acceptanceCriteria: "...",
         tag: "Task",
         type: "task",
         assignee: ["Alina"],
@@ -41,6 +47,8 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 4,
         title: "Happieness Management",
+        description: "...",
+        acceptanceCriteria: "...",
         tag: "Epic",
         type: "experiment",
         assignee: ["Kobe"],
@@ -50,6 +58,8 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 5,
         title: "Kanban Setup Dev Environment",
+        description: "...",
+        acceptanceCriteria: "...",
         tag: "Task",
         type: "task",
         assignee: ["Max"],
@@ -59,6 +69,8 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 6,
         title: "Kanban Development",
+        description: "...",
+        acceptanceCriteria: "...",
         tag: "Task",
         type: "task",
         assignee: ["Max"],
@@ -68,6 +80,8 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 7,
         title: "Create Kanban Board Taks",
+        description: "...",
+        acceptanceCriteria: "...",
         tag: "Subtask",
         type: "subtask",
         assignee: ["Alina"],
@@ -77,6 +91,8 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 8,
         title: "Test Kanban",
+        description: "...",
+        acceptanceCriteria: "...",
         tag: "Test",
         type: "task",
         assignee: ["Carolin"],
@@ -86,6 +102,8 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 9,
         title: "Organize Party",
+        description: "...",
+        acceptanceCriteria: "...",
         tag: "Task",
         type: "dates",
         assignee: ["Kobe"],
@@ -95,6 +113,8 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 10,
         title: "Invite Guests to Party",
+        description: "...",
+        acceptanceCriteria: "...",
         tag: "Subtask",
         type: "subtask",
         assignee: ["Alina"],
