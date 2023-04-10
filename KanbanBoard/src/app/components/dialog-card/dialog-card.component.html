@@ -1,8 +1,35 @@
 <div class="dialog-card">
     <div class="dialog-card_background"> 
         <div class="dialog-card_content">
-            <div class="dialog-card_content-header"></div>
-            <app-tag [tag]="data.tag"></app-tag>
+            <div class="dialog-card_content-header">
+                <app-tag [tag]="data.tag"></app-tag>
+                <h3>{{data.title}}</h3>
+                <button (click)="closeDialog()">X</button>
+            </div>
+            <div class="dialog-card_content-description">
+                <h4>Description</h4>
+                <textarea [(ngModel)]="data.description"></textarea>
+            </div> 
+            <div class="dialog-card_content-acceptance-criteria">
+                <h4>Acceptance Criteria</h4>
+                <textarea [(ngModel)]="data.acceptanceCriteria"></textarea>
+            </div>
+            <div class="dialog-card_content-card-info">
+                <div class="dialog-card_content-card-info-ticket">
+                    <img src="../../../assets/{{data.type}}.png">
+                    <p>TICKET NO {{data.id}}</p>
+                </div>
+                <div class="dialog-card_content-card-info-member" >
+                    <ng-container *ngFor="let assignee of data.assignee">
+                        <app-avatar [assigneeName]="assignee"></app-avatar>
+                    </ng-container>   
+                </div>
+            </div>
+            <div class="dialog-card_content-labels">
+                <ng-container *ngFor="let label of data.label">
+                    <app-label [labelName]="label"></app-label>
+                </ng-container>    
+            </div>
         </div>
     </div>
 </div>

@@ -24,16 +24,19 @@ export class CardComponent {
     const dialogRef = this.dialog.open(DialogCardComponent, {
       data: {
         title: this.title, 
+        acceptanceCriteria: this.acceptanceCriteria,
+        description: this.description,
         tag: this.tag, 
         id: this.id, 
-        labels: this.labels, 
+        label: this.labels, 
         type: this.type, 
-        assignees: this.assignees
+        assignee: this.assignees
       }
     })
 
     dialogRef.afterClosed().subscribe( result => {
       console.log('dialog closed');
+      console.log(result.data);
     })
   }
 }

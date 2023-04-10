@@ -113,7 +113,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 10,
         title: "Invite Guests to Party",
-        description: "...",
+        description: "hallo",
         acceptanceCriteria: "...",
         tag: "Subtask",
         type: "subtask",

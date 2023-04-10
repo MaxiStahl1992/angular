@@ -7,14 +7,9 @@ import { Ticket } from 'src/app/model/ticket';
   templateUrl: './dialog-card.component.html',
   styleUrls: ['./dialog-card.component.scss']
 })
-export class DialogCardComponent implements OnInit{
+export class DialogCardComponent {
 
   constructor( public dialogRef: MatDialogRef<DialogCardComponent>, @Inject (MAT_DIALOG_DATA) public data: Ticket) {}
-
-  ngOnInit() {
-    console.log(this.data.tag)
-    console.log("title: ", this.data.label)
-  }
 
   closeDialog() {
     this.dialogRef.close()
