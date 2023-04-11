@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { DialogCardComponent } from '../dialog-card/dialog-card.component';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -18,25 +17,10 @@ export class CardComponent {
   @Input() type: string = '';
   @Input() assignees: string[] = [];
 
-  constructor(private dialog: MatDialog) {}
+  constructor(private router: Router) {}
 
-  openDialog() {
-    const dialogRef = this.dialog.open(DialogCardComponent, {
-      data: {
-        title: this.title, 
-        acceptanceCriteria: this.acceptanceCriteria,
-        description: this.description,
-        tag: this.tag, 
-        id: this.id, 
-        label: this.labels, 
-        type: this.type, 
-        assignee: this.assignees
-      }
-    })
-
-    dialogRef.afterClosed().subscribe( result => {
-      console.log('dialog closed');
-      console.log(result.data);
-    })
+  openTicket() {
+    this.router.navigate([`ticket/${this.id}`])
+    console.log('clicked')
   }
 }

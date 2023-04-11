@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of, catchError, tap } from 'rxjs';
 import { Ticket } from '../model/ticket';
 
@@ -8,6 +8,10 @@ import { Ticket } from '../model/ticket';
 })
 export class TicketService {
   private ticketUrl = 'api/tickets';
+
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
 
   constructor(private http: HttpClient) { }
 
@@ -26,6 +30,15 @@ export class TicketService {
         tap(_ => console.log(`fetched hero id=${id}`)),
         catchError(this.handleError<Ticket>(`getHero id=${id}`))
     );
+  }
+
+  updateTicket(ticket: Ticket): Observable<any> {
+    return this.http.put(this.ticketUrl, ticket, this.httpOptions)
+      .pipe(
+          tap(_ => console.log(`updated ticket # ${ticket.id}`)),
+          catchError(this.handleError<any>('updateTicket'))
+
+      )
   }
 
 /**

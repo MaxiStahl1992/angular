@@ -17,7 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { TeamMemberComponent } from './components/team-member/team-member.component';
-import { DialogCardComponent } from './components/dialog-card/dialog-card.component';
+import { TicketComponent } from './views/ticket/ticket.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,7 @@ import { DialogCardComponent } from './components/dialog-card/dialog-card.compon
     SidebarComponent,
     KanbanBoardComponent,
     TeamMemberComponent,
-    DialogCardComponent
+    TicketComponent
   ],
   imports: [
     BrowserModule,
